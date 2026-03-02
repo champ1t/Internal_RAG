@@ -1,0 +1,7 @@
+ID,Query,Expected,Actual,Score
+C007,manager,ผจ.สบลตน.,REJECT,0
+C013,omc sockhla,ศูนย์ OMC สงขลา,CHOICE,50.0
+C022,ip-phone sbv,IP-Phone SBC,CHOICE,50.0
+C023,bras tott,BRAS TOT,CHOICE,50.0
+C024,omc hty,ศูนย์ OMC หาดใหญ่,CHOICE,50.0
+C025,network op,NOC,REJECT,0

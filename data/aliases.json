@@ -1,0 +1,55 @@
+{
+    "ne8000": [
+        "huawei ne8000",
+        "huawei netengine 8000",
+        "ne 8000"
+    ],
+    "uaps": [
+        "zte uaps",
+        "uaps zte"
+    ],
+    "olt": [
+        "olt c300",
+        "olt c320",
+        "c6xx",
+        "zte olt"
+    ],
+    "c300": [
+        "zte c300",
+        "olt c300"
+    ],
+    "c320": [
+        "zte c320",
+        "olt c320"
+    ],
+    "asr920": [
+        "cisco asr920",
+        "asr 920"
+    ],
+    "asr9006": [
+        "cisco asr9006",
+        "asr 9006"
+    ],
+    "dg8245w2": [
+        "huawei dg8245w2"
+    ],
+    "hg8245w5": [
+        "huawei hg8245w5"
+    ],
+    "hg8145x6": [
+        "huawei hg8145x6"
+    ],
+    "f688": [
+        "zte f688"
+    ],
+    "f680": [
+        "zte f680"
+    ],
+    "h298a": [
+        "zte h298a"
+    ],
+    "meru": [
+        "meru wifi",
+        "meru wireless"
+    ]
+}

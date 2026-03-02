@@ -1,0 +1,59 @@
+[
+    {
+        "category": "contact",
+        "question": "เบอร์คุณ เฉลิมรัตน์",
+        "expected_type": "person",
+        "expected_contains": "เฉลิมรัตน์"
+    },
+    {
+        "category": "contact",
+        "question": "ติดต่อ ศูนย์ RNOC หาดใหญ่",
+        "expected_type": "team",
+        "expected_contains": "074-856-174"
+    },
+    {
+        "category": "contact",
+        "question": "02-575-7222 เป็นของใคร",
+        "expected_type": "reverse",
+        "expected_contains": "เฉลิมรัตน์"
+    },
+    {
+        "category": "contact",
+        "question": "เบอร์ Radius NT1",
+        "expected_type": "team",
+        "expected_contains": "กด 2"
+    },
+    {
+        "category": "rag",
+        "question": "RAG คืออะไร",
+        "expected_type": "knowledge"
+    },
+    {
+        "category": "rag",
+        "question": "ขั้นตอนแจ้งเหตุขัดข้อง",
+        "expected_type": "procedure"
+    },
+    {
+        "category": "rag",
+        "question": "สูตรทำต้มยำกุ้ง",
+        "expected_type": "irrelevant"
+    },
+    {
+        "category": "contact",
+        "question": [
+            "เบอร์ ผส.",
+            "1"
+        ],
+        "expected_type": "person",
+        "expected_contains": "โทร"
+    },
+    {
+        "category": "contact",
+        "question": [
+            "ใครคือ ผจ.",
+            "2"
+        ],
+        "expected_type": "person",
+        "expected_contains": "ผู้จัดการ"
+    }
+]

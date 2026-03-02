@@ -1,0 +1,23 @@
+[
+  {
+    "query": "TACACS+ คืออะไร",
+    "status": "PASS",
+    "latency": 70.85990905761719,
+    "route": "cache_hit",
+    "answer_snippet": "เนื่องจากไม่พบเอกสารภายในที่ระบุชัดเจนเกี่ยวกับราย"
+  },
+  {
+    "query": "TACACS+ คืออะไร",
+    "status": "PASS",
+    "latency": 14.567136764526367,
+    "route": "cache_hit",
+    "answer_snippet": "เนื่องจากไม่พบเอกสารภายในที่ระบุชัดเจนเกี่ยวกับราย"
+  },
+  {
+    "query": "TACACS+ คืออะไร",
+    "status": "PASS",
+    "latency": 14.315128326416016,
+    "route": "cache_hit",
+    "answer_snippet": "เนื่องจากไม่พบเอกสารภายในที่ระบุชัดเจนเกี่ยวกับราย"
+  }
+]

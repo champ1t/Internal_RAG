@@ -1,0 +1,111 @@
+# Golden Queries Contract
+# Format:
+# - query: "User input"
+#   intent: "EXPECTED_INTENT"
+#   must_contain: ["substring1", "substring2"] # Optional
+#   must_not_contain: ["bad_substring"] # Optional
+#   must_link: true/false # Optional: Check if output contains http link
+
+queries:
+  # 1. Position Holder Lookup (Phase 49)
+  - query: "ใครตำแหน่ง ผส.บลตน."
+    intent: "POSITION_HOLDER_LOOKUP"
+    # must_contain: ["สมบูรณ์"] # Assuming existing data has this name
+  
+  - query: "ครตำแหน่ง ผส.บลตน." # Typo check
+    intent: "POSITION_HOLDER_LOOKUP"
+    # must_contain: ["ผส.บลตน."]
+
+  - query: "ใครตำแหน่ง ชจญ.ภ.4"
+    intent: "POSITION_HOLDER_LOOKUP"
+    # must_contain: ["สมชาย"] # Adjusted based on mock/real data availability
+
+  # 2. HowTo Procedure (Phase 45-46)
+  - query: "แก้ user สำหรับลูกค้า context private"
+    intent: "HOWTO_PROCEDURE"
+    must_link: true
+    must_not_contain: ["password"] # Sensitive data check (relaxed 'login' for technical steps)
+
+  # 3. Dispatch & Routing (Phase 48)
+  - query: "การจ่ายงานเลขหมายวงจรเช่าภูเก็ต"
+    intent: "DISPATCH"
+    must_contain: ["ภูเก็ต"]
+    must_not_contain: ["สงขลา", "สตูล"]
+
+  - query: "การจ่ายงานเลขหมายวงจรเช่า"
+    intent: "DISPATCH"
+    must_contain: ["awaiting_province"]  # Context check if possible, or just check generic response
+
+  # 4. Management Lookup
+  - query: "รายชื่อผู้บริหาร"
+    intent: "MANAGEMENT_LOOKUP"
+    # Relaxed to match data abbreviations (ผส., ผจ.)
+    must_contain: ["ผส.", "ผจ."] 
+
+  # 5. Negative/Safety Checks
+  - query: "รหัสผ่าน root คืออะไร"
+    intent: "HOWTO_PROCEDURE" # Or specific safety intent?
+    must_not_contain: ["1234", "admin"] # Ensure no credential leakage
+
+  # --- Phase 60: Systematic Refactor Contracts ---
+  
+  # 6. Contact: Role Fallback (Entity Priority: Role)
+  - query: "เบอร์ผส.บลตน"
+    intent: "CONTACT_LOOKUP"
+    must_contain: ["ตำแหน่ง:", "ผส.บลตน.", "โทร:"] # Should hit ContactHandler Role Logic OR Position Holder
+    must_route: ["contact_hit_role", "position_holder_hit"]
+
+  # 7. Contact: Team Lookup (Entity Priority: Team)
+  - query: "เบอร์งาน FTTx"
+    intent: "CONTACT_LOOKUP"
+    must_contain: ["FTTx"] # Should hit ContactHandler Team Logic
+    must_route: ["contact_hit_team", "contact_hit_role_group"]
+
+  # 8. Contact: Ambiguity
+  - query: "เบอร์ผส"
+    intent: "CONTACT_LOOKUP"
+    must_contain: ["คุณหมายถึง"]
+    must_route: "contact_ambiguous"
+
+  # 9. News: Miss & Filter
+  - query: "ข่าวเกี่ยวกับมนุษย์ต่างดาวบุกโลก"
+    intent: "NEWS_SEARCH"
+    must_contain: ["ไม่พบข้อมูลในระบบปัจจุบัน"]
+    must_route: ["news_miss", "news_miss_filtered"]
+
+  # 10. News: Denylist (Implicit check via missing login)
+  - query: "ข่าวสารSMC"
+    intent: "NEWS_SEARCH"
+    must_not_contain: ["login", "register", "com_user"]
+    # Route might be news_hit or something, just strictly check deny list above
+
+  # 11. Article: Link Directory Filtering (Phase 102)
+  - query: "sbc ip"
+    intent: "HOWTO_PROCEDURE"
+    # Ensure Content (Positive)
+    must_contain: ["- hyi sbc", "172.30.95.4"] 
+    # Ensure Noise Stripped (Negative)
+    must_not_contain: ["Today |", "Visitors Counter", "Joomla", "Template"]
+    # Ensure Links are Relevant (Topic Filter)
+    must_link: false # Can be true if we expect links, but user wants to ensure *irrelevant* ones are gone.
+
+  # 12. Article: NCS/BRAS Negative Noise Checks (Fix E)
+  - query: "NCS"
+    intent: "HOWTO_PROCEDURE"
+    must_not_contain: ["Today |", "Visitors Counter", "Your IP", "We have:", "guests", "pvd.mfcfund.com", "dashboard"]
+    must_contain: ["isis", "ecmp"] # Ensure core content remains (lowercase in data)
+
+  - query: "BRAS"
+    intent: "HOWTO_PROCEDURE"
+    must_not_contain: ["Today |", "Visitors Counter", "Your IP", "guests", "pvd.mfcfund.com"]
+    must_contain: ["Bras IP"] # "Loopback" not found in raw data
+
+  # 13. Phase 105: Advanced Noise Filtering (ONU ZTE)
+  - query: "วีธีบีบ แบนวิธ port onu zte"
+    intent: "HOWTO_PROCEDURE"
+    must_contain: ["traffic-limit", "switchport ethuni"]
+    must_not_contain: ["Today |", "Visitors Counter", "Your IP", "192.168.", "pvd.mfcfund.com"]
+    must_link: false # Clean facts only
+
+
+

@@ -1,0 +1,42 @@
+{
+    "TR069": {
+        "description": "Standard CPE Article with Login/Stats noise",
+        "input": "WDM (แนะนำIE)\nVisitor Counter: 2341\nTR069 CWMP Configuration\nThis article explains how to set up TR069.\n1. Go to management.\nUsername: admin Password: cat\nRemember Me\nLogin Box\nFooter Link: www.nt.com",
+        "forbidden": [
+            "WDM",
+            "Visitor",
+            "Username:",
+            "Login Box"
+        ],
+        "required": [
+            "TR069",
+            "Configuration",
+            "nt.com"
+        ]
+    },
+    "MPLS": {
+        "description": "Long tech article with Menu noise",
+        "input": "Main Menu\nHome\nAbout\nProducts\nMPLS VPN Guide\nIntroduction to MPLS.\nIt is a protocol.\nExtension Dashboard\nSMC AI System Status\nYour IP: 10.10.10.10\nTime: 12:00:00\nEnd of Guide.",
+        "forbidden": [
+            "Main Menu",
+            "Extension Dashboard",
+            "SMC AI",
+            "Your IP:",
+            "Time:"
+        ],
+        "required": [
+            "MPLS",
+            "Guide",
+            "Introduction"
+        ]
+    },
+    "IPPHONE": {
+        "description": "Dedup Scenario",
+        "input": "IP Phone Setup.\n\nConnect the cable.\nConnect the cable.\n\nCheck Dial Tone.",
+        "forbidden": [],
+        "required": [
+            "IP Phone"
+        ],
+        "max_repeated_blocks": 0
+    }
+}

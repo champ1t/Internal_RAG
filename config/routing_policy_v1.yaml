@@ -1,0 +1,39 @@
+# Frozen Decision Policy (Do Not Edit Without Review)
+# This file governs the core routing behavior of the RAG system.
+# Changing these values acts as a logic change and requires regression testing.
+
+position_lookup:
+  auto_resolve_single: true
+  allow_clarify_only_if_multiple: true
+
+web_knowledge:
+  # Internal confidence score above which Web Knowledge is overridden
+  internal_override_threshold: 0.65
+  # Always override Web Knowledge if the internal intent is How-To (procedure)
+  never_override_internal_howto: true
+
+contact_lookup:
+  guided_fallback_on_miss: true
+  no_kill_switch: true
+
+clarify:
+  # CLARIFY must strictly only be allowed after these lookups have failed or requested it
+  allowed_only_after:
+    - position_lookup
+    - contact_lookup
+    - howto_procedure
+
+# ==================================================
+# SMC HARDENING (Added Phase 3.5)
+# LOCKED PARAMETERS - DO NOT CHANGE
+# ==================================================
+smc_hardening:
+  enabled: true
+  vendor_match: "EXACT"
+  model_match: "EXACT" 
+  web_search_technical: "DISABLED"
+  fallback_chain: "NONE"
+  similarity_threshold: 0.70  # Fixed threshold, no auto-adjust
+  logging:
+    audit_route: true
+    audit_reason: true

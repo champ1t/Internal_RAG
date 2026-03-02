@@ -1,0 +1,7 @@
+Metric,Value
+Total Queries,25
+Hit Rate,48.0%
+Choice Rate,32.0%
+Reject Rate,20.0%
+False Positives,0
+P95 Latency (ms),0.47
