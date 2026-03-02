@@ -82,18 +82,57 @@ def fetch_page(url: str, timeout: int = 15) -> Optional[str]:
 
 
 def extract_text(html: str, base_url: str = "") -> str:
-    """แปลง HTML → plain text (เน้น article body)"""
+    """
+    แปลง HTML → plain text สำหรับ hash comparison
+    ลบ dynamic elements (CSRF tokens, session IDs, timestamps) ออกก่อน
+    เพื่อให้ hash เปลี่ยนเฉพาะตอนเนื้อหาจริงๆ เปลี่ยน
+    """
+    import re as _re
     soup = BeautifulSoup(html, "html.parser")
-    for tag in soup(["script", "style", "noscript", "iframe", "nav", "footer"]):
+
+    # ลบ tags ที่ไม่เกี่ยวกับเนื้อหา
+    for tag in soup(["script", "style", "noscript", "iframe", "nav", "footer", "head"]):
         tag.decompose()
-    # เน้น content area ก่อน
+
+    # ลบ hidden input fields (มักมี CSRF token, session token)
+    for tag in soup.find_all("input", {"type": "hidden"}):
+        tag.decompose()
+
+    # ลบ meta tags (อาจมี dynamic nonce)
+    for tag in soup.find_all("meta"):
+        tag.decompose()
+
+    # ลบ HTML comments (บางเว็บใส่ timestamp ไว้ใน comment)
+    from bs4 import Comment
+    for comment in soup.find_all(string=lambda t: isinstance(t, Comment)):
+        comment.extract()
+
+    # ลบ Joomla sidebar ที่มีสถิติ dynamic (Today/Yesterday/This week visitor counts)
+    for sid in soup.select("#leftcol, #rightcol, .sidebar, [id*='col']"):
+        sid.decompose()
+
+    # เน้น content area ก่อน (ลด noise จาก menu/sidebar)
     body = (
         soup.select_one("div.item-page")
+        or soup.select_one("div.com-content-article")
         or soup.select_one("div#content")
         or soup.select_one("article")
         or soup.body
     )
-    return (body or soup).get_text("\n", strip=True)
+    text = (body or soup).get_text("\n", strip=True)
+
+    # ลบ Joomla visitor stats block (Today: N Yesterday: N This month: N guests online)
+    # ตัวเลขพวกนี้เปลี่ยนทุก request ทำให้ hash ไม่ stable
+    text = re.sub(
+        r'(Today|Yesterday|This month|Last month|guests? online|We have)[^\n]{0,60}\d+',
+        '', text, flags=re.IGNORECASE
+    )
+    # ลบ standalone large numbers (Joomla hit counter เช่น 611613 ที่เพิ่มทุก request)
+    text = _re.sub(r'(?<!\w)\d{5,}(?!\w)', '', text)
+
+    # ลบ whitespace ส่วนเกินที่อาจแตกต่างกันแต่ละครั้ง
+    text = _re.sub(r"\s+", " ", text).strip()
+    return text
 
 
 def chunk_text(text: str, chunk_size: int = 700, overlap: int = 100) -> list[str]:
