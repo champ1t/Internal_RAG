@@ -104,3 +104,7 @@ results/
 *.checkpoint-*
 *_backup.py
 *_backup_*.py
+
+# Backup snapshots — contain internal data
+data/state_backup*.json
+data/vectorstore_backup*/
