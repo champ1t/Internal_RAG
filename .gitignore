@@ -79,7 +79,7 @@ logs_test/
 test_cache_db/
 backups/
 backup_stable_v1/
-results/runs/
+results/
 .pytest_cache/
 
 # ============================================================

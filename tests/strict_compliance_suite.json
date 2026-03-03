@@ -2085,75 +2085,75 @@
   {
     "test_id": "TEST_0198",
     "type": "EXACT",
-    "query": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "query": "Supervisor Agent",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0199",
     "type": "VARIANT_SPACING",
-    "query": "นายปรัชญา ศรีเสาวชาติ (ผจ เปิ้ล)",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "query": "Supervisor Agent (ผจ เปิ้ล)",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Removed punctuation/spaces"
   },
   {
     "test_id": "TEST_0200",
     "type": "VARIANT_MERGED",
-    "query": "นายปรัชญาศรีเสาวชาติ(ผจ.เปิ้ล)",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "query": "Supervisor Agent",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0201",
     "type": "SPECIAL_DOT_MERGED",
-    "query": "นายปรัชญา ศรีเสาวชาติ (ผจเปิ้ล)",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "query": "Supervisor Agent (ผจเปิ้ล)",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Dot removed"
   },
   {
     "test_id": "TEST_0202",
     "type": "SPECIAL_PAREN",
-    "query": "นายปรัชญา ศรีเสาวชาติ",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "query": "Supervisor Agent",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2161,59 +2161,59 @@
     "test_id": "TEST_0203",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "ผจ.เปิ้ล",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0204",
     "type": "EXACT",
-    "query": "นายเหมาะโชค เจียรนัย (โชค)",
-    "expected_match": "นายเหมาะโชค เจียรนัย (โชค)",
+    "query": "Field Engineer A",
+    "expected_match": "Field Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0205",
     "type": "VARIANT_MERGED",
-    "query": "นายเหมาะโชคเจียรนัย(โชค)",
-    "expected_match": "นายเหมาะโชค เจียรนัย (โชค)",
+    "query": "Field Engineer A",
+    "expected_match": "Field Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0206",
     "type": "SPECIAL_PAREN",
-    "query": "นายเหมาะโชค เจียรนัย",
-    "expected_match": "นายเหมาะโชค เจียรนัย (โชค)",
+    "query": "Field Engineer A",
+    "expected_match": "Field Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2221,59 +2221,59 @@
     "test_id": "TEST_0207",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "โชค",
-    "expected_match": "นายเหมาะโชค เจียรนัย (โชค)",
+    "expected_match": "Field Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0208",
     "type": "EXACT",
-    "query": "นายบดินทร์ เลิศจำรัสพงศ์ (เตเต้)",
-    "expected_match": "นายบดินทร์ เลิศจำรัสพงศ์ (เตเต้)",
+    "query": "Field Engineer B",
+    "expected_match": "Field Engineer B",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0209",
     "type": "VARIANT_MERGED",
-    "query": "นายบดินทร์เลิศจำรัสพงศ์(เตเต้)",
-    "expected_match": "นายบดินทร์ เลิศจำรัสพงศ์ (เตเต้)",
+    "query": "Field Engineer B",
+    "expected_match": "Field Engineer B",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0210",
     "type": "SPECIAL_PAREN",
-    "query": "นายบดินทร์ เลิศจำรัสพงศ์",
-    "expected_match": "นายบดินทร์ เลิศจำรัสพงศ์ (เตเต้)",
+    "query": "Field Engineer B",
+    "expected_match": "Field Engineer B",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2281,59 +2281,59 @@
     "test_id": "TEST_0211",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "เตเต้",
-    "expected_match": "นายบดินทร์ เลิศจำรัสพงศ์ (เตเต้)",
+    "expected_match": "Field Engineer B",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0212",
     "type": "EXACT",
-    "query": "นายวัชระ จุลเอียด (เสือ)",
-    "expected_match": "นายวัชระ จุลเอียด (เสือ)",
+    "query": "Field Engineer C",
+    "expected_match": "Field Engineer C",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0213",
     "type": "VARIANT_MERGED",
-    "query": "นายวัชระจุลเอียด(เสือ)",
-    "expected_match": "นายวัชระ จุลเอียด (เสือ)",
+    "query": "Field Engineer C",
+    "expected_match": "Field Engineer C",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0214",
     "type": "SPECIAL_PAREN",
-    "query": "นายวัชระ จุลเอียด",
-    "expected_match": "นายวัชระ จุลเอียด (เสือ)",
+    "query": "Field Engineer C",
+    "expected_match": "Field Engineer C",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2341,104 +2341,104 @@
     "test_id": "TEST_0215",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "เสือ",
-    "expected_match": "นายวัชระ จุลเอียด (เสือ)",
+    "expected_match": "Field Engineer C",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0216",
     "type": "EXACT",
-    "query": "นายภาณุพงศ์ ทิพย์สังข์ (เม)",
-    "expected_match": "นายภาณุพงศ์ ทิพย์สังข์ (เม)",
+    "query": "Network Engineer A",
+    "expected_match": "Network Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0217",
     "type": "VARIANT_MERGED",
-    "query": "นายภาณุพงศ์ทิพย์สังข์(เม)",
-    "expected_match": "นายภาณุพงศ์ ทิพย์สังข์ (เม)",
+    "query": "Network Engineer A",
+    "expected_match": "Network Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0218",
     "type": "SPECIAL_PAREN",
-    "query": "นายภาณุพงศ์ ทิพย์สังข์",
-    "expected_match": "นายภาณุพงศ์ ทิพย์สังข์ (เม)",
+    "query": "Network Engineer A ทิพย์สังข์",
+    "expected_match": "Network Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
   {
     "test_id": "TEST_0219",
     "type": "EXACT",
-    "query": "นายนพดล ทองประดับ (เก่ง)",
-    "expected_match": "นายนพดล ทองประดับ (เก่ง)",
+    "query": "Network Engineer B",
+    "expected_match": "Network Engineer B",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0220",
     "type": "VARIANT_MERGED",
-    "query": "นายนพดลทองประดับ(เก่ง)",
-    "expected_match": "นายนพดล ทองประดับ (เก่ง)",
+    "query": "Network Engineer B",
+    "expected_match": "Network Engineer B",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0221",
     "type": "SPECIAL_PAREN",
-    "query": "นายนพดล ทองประดับ",
-    "expected_match": "นายนพดล ทองประดับ (เก่ง)",
+    "query": "Network Engineer B ทองประดับ",
+    "expected_match": "Network Engineer B",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2446,59 +2446,59 @@
     "test_id": "TEST_0222",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "เก่ง",
-    "expected_match": "นายนพดล ทองประดับ (เก่ง)",
+    "expected_match": "Network Engineer B",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0223",
     "type": "EXACT",
-    "query": "นางกุลธิดา จารุวรรณเสวี (กุล)",
-    "expected_match": "นางกุลธิดา จารุวรรณเสวี (กุล)",
+    "query": "HelpDesk Staff A (กุล)",
+    "expected_match": "HelpDesk Staff A (กุล)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0224",
     "type": "VARIANT_MERGED",
-    "query": "นางกุลธิดาจารุวรรณเสวี(กุล)",
-    "expected_match": "นางกุลธิดา จารุวรรณเสวี (กุล)",
+    "query": "HelpDesk Staff A",
+    "expected_match": "HelpDesk Staff A (กุล)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0225",
     "type": "SPECIAL_PAREN",
-    "query": "นางกุลธิดา จารุวรรณเสวี",
-    "expected_match": "นางกุลธิดา จารุวรรณเสวี (กุล)",
+    "query": "HelpDesk Staff A",
+    "expected_match": "HelpDesk Staff A (กุล)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2506,59 +2506,59 @@
     "test_id": "TEST_0226",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "กุล",
-    "expected_match": "นางกุลธิดา จารุวรรณเสวี (กุล)",
+    "expected_match": "HelpDesk Staff A (กุล)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0227",
     "type": "EXACT",
-    "query": "นายเจษฎา ดิษฐโสภา (เจษ)",
-    "expected_match": "นายเจษฎา ดิษฐโสภา (เจษ)",
+    "query": "HelpDesk Staff B (เจษ)",
+    "expected_match": "HelpDesk Staff B (เจษ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0228",
     "type": "VARIANT_MERGED",
-    "query": "นายเจษฎาดิษฐโสภา(เจษ)",
-    "expected_match": "นายเจษฎา ดิษฐโสภา (เจษ)",
+    "query": "HelpDesk Staff B",
+    "expected_match": "HelpDesk Staff B (เจษ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0229",
     "type": "SPECIAL_PAREN",
-    "query": "นายเจษฎา ดิษฐโสภา",
-    "expected_match": "นายเจษฎา ดิษฐโสภา (เจษ)",
+    "query": "HelpDesk Staff B",
+    "expected_match": "HelpDesk Staff B (เจษ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2566,59 +2566,59 @@
     "test_id": "TEST_0230",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "เจษ",
-    "expected_match": "นายเจษฎา ดิษฐโสภา (เจษ)",
+    "expected_match": "HelpDesk Staff B (เจษ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0231",
     "type": "EXACT",
-    "query": "นายวุฒิชัย หมื่นขจร (เต้)",
-    "expected_match": "นายวุฒิชัย หมื่นขจร (เต้)",
+    "query": "HelpDesk Staff C",
+    "expected_match": "HelpDesk Staff C",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0232",
     "type": "VARIANT_MERGED",
-    "query": "นายวุฒิชัยหมื่นขจร(เต้)",
-    "expected_match": "นายวุฒิชัย หมื่นขจร (เต้)",
+    "query": "HelpDesk Staff C",
+    "expected_match": "HelpDesk Staff C",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0233",
     "type": "SPECIAL_PAREN",
-    "query": "นายวุฒิชัย หมื่นขจร",
-    "expected_match": "นายวุฒิชัย หมื่นขจร (เต้)",
+    "query": "HelpDesk Staff C หมื่นขจร",
+    "expected_match": "HelpDesk Staff C",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2626,29 +2626,29 @@
     "test_id": "TEST_0234",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "เต้",
-    "expected_match": "นายวุฒิชัย หมื่นขจร (เต้)",
+    "expected_match": "HelpDesk Staff C",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0235",
     "type": "EXACT",
-    "query": "น.ส.ปาลิตา กลิ่นหอม (จูน)",
-    "expected_match": "น.ส.ปาลิตา กลิ่นหอม (จูน)",
+    "query": "HelpDesk Staff D",
+    "expected_match": "HelpDesk Staff D",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
@@ -2656,29 +2656,29 @@
     "test_id": "TEST_0236",
     "type": "VARIANT_SPACING",
     "query": "น ส ปาลิตา กลิ่นหอม (จูน)",
-    "expected_match": "น.ส.ปาลิตา กลิ่นหอม (จูน)",
+    "expected_match": "HelpDesk Staff D",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Removed punctuation/spaces"
   },
   {
     "test_id": "TEST_0237",
     "type": "VARIANT_MERGED",
-    "query": "น.ส.ปาลิตากลิ่นหอม(จูน)",
-    "expected_match": "น.ส.ปาลิตา กลิ่นหอม (จูน)",
+    "query": "HelpDesk Staff D",
+    "expected_match": "HelpDesk Staff D",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
@@ -2686,29 +2686,29 @@
     "test_id": "TEST_0238",
     "type": "SPECIAL_DOT_MERGED",
     "query": "นสปาลิตา กลิ่นหอม (จูน)",
-    "expected_match": "น.ส.ปาลิตา กลิ่นหอม (จูน)",
+    "expected_match": "HelpDesk Staff D",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Dot removed"
   },
   {
     "test_id": "TEST_0239",
     "type": "SPECIAL_PAREN",
-    "query": "น.ส.ปาลิตา กลิ่นหอม",
-    "expected_match": "น.ส.ปาลิตา กลิ่นหอม (จูน)",
+    "query": "HelpDesk Staff D กลิ่นหอม",
+    "expected_match": "HelpDesk Staff D",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2716,104 +2716,104 @@
     "test_id": "TEST_0240",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "จูน",
-    "expected_match": "น.ส.ปาลิตา กลิ่นหอม (จูน)",
+    "expected_match": "HelpDesk Staff D",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0241",
     "type": "EXACT",
-    "query": "นายญฐกร เชื้อช่วยชู (กบ)",
-    "expected_match": "นายญฐกร เชื้อช่วยชู (กบ)",
+    "query": "Field Staff E เชื้อช่วยชู (กบ)",
+    "expected_match": "Field Staff E เชื้อช่วยชู (กบ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0242",
     "type": "VARIANT_MERGED",
-    "query": "นายญฐกรเชื้อช่วยชู(กบ)",
-    "expected_match": "นายญฐกร เชื้อช่วยชู (กบ)",
+    "query": "Field Staff E",
+    "expected_match": "Field Staff E เชื้อช่วยชู (กบ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0243",
     "type": "SPECIAL_PAREN",
-    "query": "นายญฐกร เชื้อช่วยชู",
-    "expected_match": "นายญฐกร เชื้อช่วยชู (กบ)",
+    "query": "Field Staff E เชื้อช่วยชู",
+    "expected_match": "Field Staff E เชื้อช่วยชู (กบ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
   {
     "test_id": "TEST_0244",
     "type": "EXACT",
-    "query": "นายกำชัย ธรรมปัญญาสกุล (บอย)",
-    "expected_match": "นายกำชัย ธรรมปัญญาสกุล (บอย)",
+    "query": "Field Staff F ธรรมปัญญาสกุล (บอย)",
+    "expected_match": "Field Staff F ธรรมปัญญาสกุล (บอย)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0245",
     "type": "VARIANT_MERGED",
-    "query": "นายกำชัยธรรมปัญญาสกุล(บอย)",
-    "expected_match": "นายกำชัย ธรรมปัญญาสกุล (บอย)",
+    "query": "Field Staff F",
+    "expected_match": "Field Staff F ธรรมปัญญาสกุล (บอย)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0246",
     "type": "SPECIAL_PAREN",
-    "query": "นายกำชัย ธรรมปัญญาสกุล",
-    "expected_match": "นายกำชัย ธรรมปัญญาสกุล (บอย)",
+    "query": "Field Staff F ธรรมปัญญาสกุล",
+    "expected_match": "Field Staff F ธรรมปัญญาสกุล (บอย)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2821,59 +2821,59 @@
     "test_id": "TEST_0247",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "บอย",
-    "expected_match": "นายกำชัย ธรรมปัญญาสกุล (บอย)",
+    "expected_match": "Field Staff F ธรรมปัญญาสกุล (บอย)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0248",
     "type": "EXACT",
-    "query": "นายอธิส อ่อนรอด (ธิส)",
-    "expected_match": "นายอธิส อ่อนรอด (ธิส)",
+    "query": "Field Staff G อ่อนรอด (ธิส)",
+    "expected_match": "Field Staff G อ่อนรอด (ธิส)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0249",
     "type": "VARIANT_MERGED",
-    "query": "นายอธิสอ่อนรอด(ธิส)",
-    "expected_match": "นายอธิส อ่อนรอด (ธิส)",
+    "query": "Field Staff G",
+    "expected_match": "Field Staff G อ่อนรอด (ธิส)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0250",
     "type": "SPECIAL_PAREN",
-    "query": "นายอธิส อ่อนรอด",
-    "expected_match": "นายอธิส อ่อนรอด (ธิส)",
+    "query": "Field Staff G อ่อนรอด",
+    "expected_match": "Field Staff G อ่อนรอด (ธิส)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2881,59 +2881,59 @@
     "test_id": "TEST_0251",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "ธิส",
-    "expected_match": "นายอธิส อ่อนรอด (ธิส)",
+    "expected_match": "Field Staff G อ่อนรอด (ธิส)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0252",
     "type": "EXACT",
-    "query": "นายณัฐพงศ์ ปิ่นทองพันธ์ (อัต)",
-    "expected_match": "นายณัฐพงศ์ ปิ่นทองพันธ์ (อัต)",
+    "query": "Field Staff H ปิ่นทองพันธ์ (อัต)",
+    "expected_match": "Field Staff H ปิ่นทองพันธ์ (อัต)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0253",
     "type": "VARIANT_MERGED",
-    "query": "นายณัฐพงศ์ปิ่นทองพันธ์(อัต)",
-    "expected_match": "นายณัฐพงศ์ ปิ่นทองพันธ์ (อัต)",
+    "query": "Field Staff H",
+    "expected_match": "Field Staff H ปิ่นทองพันธ์ (อัต)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0254",
     "type": "SPECIAL_PAREN",
-    "query": "นายณัฐพงศ์ ปิ่นทองพันธ์",
-    "expected_match": "นายณัฐพงศ์ ปิ่นทองพันธ์ (อัต)",
+    "query": "Field Staff H ปิ่นทองพันธ์",
+    "expected_match": "Field Staff H ปิ่นทองพันธ์ (อัต)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -2941,59 +2941,59 @@
     "test_id": "TEST_0255",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "อัต",
-    "expected_match": "นายณัฐพงศ์ ปิ่นทองพันธ์ (อัต)",
+    "expected_match": "Field Staff H ปิ่นทองพันธ์ (อัต)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0256",
     "type": "EXACT",
-    "query": "นายบัญชา แหละกุบ (ตุ้ย)",
-    "expected_match": "นายบัญชา แหละกุบ (ตุ้ย)",
+    "query": "Field Staff I แหละกุบ (ตุ้ย)",
+    "expected_match": "Field Staff I แหละกุบ (ตุ้ย)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0257",
     "type": "VARIANT_MERGED",
-    "query": "นายบัญชาแหละกุบ(ตุ้ย)",
-    "expected_match": "นายบัญชา แหละกุบ (ตุ้ย)",
+    "query": "Field Staff I",
+    "expected_match": "Field Staff I แหละกุบ (ตุ้ย)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0258",
     "type": "SPECIAL_PAREN",
-    "query": "นายบัญชา แหละกุบ",
-    "expected_match": "นายบัญชา แหละกุบ (ตุ้ย)",
+    "query": "Field Staff I แหละกุบ",
+    "expected_match": "Field Staff I แหละกุบ (ตุ้ย)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -3001,29 +3001,29 @@
     "test_id": "TEST_0259",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "ตุ้ย",
-    "expected_match": "นายบัญชา แหละกุบ (ตุ้ย)",
+    "expected_match": "Field Staff I แหละกุบ (ตุ้ย)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0260",
     "type": "EXACT",
-    "query": "น.ส.ณัฐพร บุญนิจันทร์ (กุ้ม)",
-    "expected_match": "น.ส.ณัฐพร บุญนิจันทร์ (กุ้ม)",
+    "query": "Field Staff J บุญนิจันทร์ (กุ้ม)",
+    "expected_match": "Field Staff J บุญนิจันทร์ (กุ้ม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
@@ -3031,29 +3031,29 @@
     "test_id": "TEST_0261",
     "type": "VARIANT_SPACING",
     "query": "น ส ณัฐพร บุญนิจันทร์ (กุ้ม)",
-    "expected_match": "น.ส.ณัฐพร บุญนิจันทร์ (กุ้ม)",
+    "expected_match": "Field Staff J บุญนิจันทร์ (กุ้ม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Removed punctuation/spaces"
   },
   {
     "test_id": "TEST_0262",
     "type": "VARIANT_MERGED",
-    "query": "น.ส.ณัฐพรบุญนิจันทร์(กุ้ม)",
-    "expected_match": "น.ส.ณัฐพร บุญนิจันทร์ (กุ้ม)",
+    "query": "Field Staff J",
+    "expected_match": "Field Staff J บุญนิจันทร์ (กุ้ม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
@@ -3061,29 +3061,29 @@
     "test_id": "TEST_0263",
     "type": "SPECIAL_DOT_MERGED",
     "query": "นสณัฐพร บุญนิจันทร์ (กุ้ม)",
-    "expected_match": "น.ส.ณัฐพร บุญนิจันทร์ (กุ้ม)",
+    "expected_match": "Field Staff J บุญนิจันทร์ (กุ้ม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Dot removed"
   },
   {
     "test_id": "TEST_0264",
     "type": "SPECIAL_PAREN",
-    "query": "น.ส.ณัฐพร บุญนิจันทร์",
-    "expected_match": "น.ส.ณัฐพร บุญนิจันทร์ (กุ้ม)",
+    "query": "Field Staff J บุญนิจันทร์",
+    "expected_match": "Field Staff J บุญนิจันทร์ (กุ้ม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -3091,59 +3091,59 @@
     "test_id": "TEST_0265",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "กุ้ม",
-    "expected_match": "น.ส.ณัฐพร บุญนิจันทร์ (กุ้ม)",
+    "expected_match": "Field Staff J บุญนิจันทร์ (กุ้ม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0266",
     "type": "EXACT",
-    "query": "นายวสันต์ คงแก้ว (สัน)",
-    "expected_match": "นายวสันต์ คงแก้ว (สัน)",
+    "query": "Field Staff K คงแก้ว (สัน)",
+    "expected_match": "Field Staff K คงแก้ว (สัน)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0267",
     "type": "VARIANT_MERGED",
-    "query": "นายวสันต์คงแก้ว(สัน)",
-    "expected_match": "นายวสันต์ คงแก้ว (สัน)",
+    "query": "Field Staff K",
+    "expected_match": "Field Staff K คงแก้ว (สัน)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0268",
     "type": "SPECIAL_PAREN",
-    "query": "นายวสันต์ คงแก้ว",
-    "expected_match": "นายวสันต์ คงแก้ว (สัน)",
+    "query": "Field Staff K คงแก้ว",
+    "expected_match": "Field Staff K คงแก้ว (สัน)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -3151,149 +3151,149 @@
     "test_id": "TEST_0269",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "สัน",
-    "expected_match": "นายวสันต์ คงแก้ว (สัน)",
+    "expected_match": "Field Staff K คงแก้ว (สัน)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0270",
     "type": "EXACT",
-    "query": "นายภูมิรพี มีผล (เจ)",
-    "expected_match": "นายภูมิรพี มีผล (เจ)",
+    "query": "Field Staff L มีผล (เจ)",
+    "expected_match": "Field Staff L มีผล (เจ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0271",
     "type": "VARIANT_MERGED",
-    "query": "นายภูมิรพีมีผล(เจ)",
-    "expected_match": "นายภูมิรพี มีผล (เจ)",
+    "query": "Field Staff L",
+    "expected_match": "Field Staff L มีผล (เจ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0272",
     "type": "SPECIAL_PAREN",
-    "query": "นายภูมิรพี มีผล",
-    "expected_match": "นายภูมิรพี มีผล (เจ)",
+    "query": "Field Staff L มีผล",
+    "expected_match": "Field Staff L มีผล (เจ)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
   {
     "test_id": "TEST_0273",
     "type": "EXACT",
-    "query": "นายชิษณุพงษ์ ชูแก้ว (กร)",
-    "expected_match": "นายชิษณุพงษ์ ชูแก้ว (กร)",
+    "query": "Field Staff M ชูแก้ว (กร)",
+    "expected_match": "Field Staff M ชูแก้ว (กร)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0274",
     "type": "VARIANT_MERGED",
-    "query": "นายชิษณุพงษ์ชูแก้ว(กร)",
-    "expected_match": "นายชิษณุพงษ์ ชูแก้ว (กร)",
+    "query": "Field Staff M",
+    "expected_match": "Field Staff M ชูแก้ว (กร)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0275",
     "type": "SPECIAL_PAREN",
-    "query": "นายชิษณุพงษ์ ชูแก้ว",
-    "expected_match": "นายชิษณุพงษ์ ชูแก้ว (กร)",
+    "query": "Field Staff M ชูแก้ว",
+    "expected_match": "Field Staff M ชูแก้ว (กร)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
   {
     "test_id": "TEST_0276",
     "type": "EXACT",
-    "query": "นายนริศรันดร์ ช่วยราชการ (ลิม)",
-    "expected_match": "นายนริศรันดร์ ช่วยราชการ (ลิม)",
+    "query": "Field Staff N ช่วยราชการ (ลิม)",
+    "expected_match": "Field Staff N ช่วยราชการ (ลิม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0277",
     "type": "VARIANT_MERGED",
-    "query": "นายนริศรันดร์ช่วยราชการ(ลิม)",
-    "expected_match": "นายนริศรันดร์ ช่วยราชการ (ลิม)",
+    "query": "Field Staff N",
+    "expected_match": "Field Staff N ช่วยราชการ (ลิม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0278",
     "type": "SPECIAL_PAREN",
-    "query": "นายนริศรันดร์ ช่วยราชการ",
-    "expected_match": "นายนริศรันดร์ ช่วยราชการ (ลิม)",
+    "query": "Field Staff N ช่วยราชการ",
+    "expected_match": "Field Staff N ช่วยราชการ (ลิม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -3301,59 +3301,59 @@
     "test_id": "TEST_0279",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "ลิม",
-    "expected_match": "นายนริศรันดร์ ช่วยราชการ (ลิม)",
+    "expected_match": "Field Staff N ช่วยราชการ (ลิม)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0280",
     "type": "EXACT",
-    "query": "นายณัฐศักย์ แก้วนุกูล (โก้)",
-    "expected_match": "นายณัฐศักย์ แก้วนุกูล (โก้)",
+    "query": "Field Staff O แก้วนุกูล (โก้)",
+    "expected_match": "Field Staff O แก้วนุกูล (โก้)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0281",
     "type": "VARIANT_MERGED",
-    "query": "นายณัฐศักย์แก้วนุกูล(โก้)",
-    "expected_match": "นายณัฐศักย์ แก้วนุกูล (โก้)",
+    "query": "Field Staff O",
+    "expected_match": "Field Staff O แก้วนุกูล (โก้)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0282",
     "type": "SPECIAL_PAREN",
-    "query": "นายณัฐศักย์ แก้วนุกูล",
-    "expected_match": "นายณัฐศักย์ แก้วนุกูล (โก้)",
+    "query": "Field Staff O แก้วนุกูล",
+    "expected_match": "Field Staff O แก้วนุกูล (โก้)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -3361,104 +3361,104 @@
     "test_id": "TEST_0283",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "โก้",
-    "expected_match": "นายณัฐศักย์ แก้วนุกูล (โก้)",
+    "expected_match": "Field Staff O แก้วนุกูล (โก้)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
   {
     "test_id": "TEST_0284",
     "type": "EXACT",
-    "query": "นายชลกร เคยะกูล (กร)",
-    "expected_match": "นายชลกร เคยะกูล (กร)",
+    "query": "Field Staff P เคยะกูล (กร)",
+    "expected_match": "Field Staff P เคยะกูล (กร)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0285",
     "type": "VARIANT_MERGED",
-    "query": "นายชลกรเคยะกูล(กร)",
-    "expected_match": "นายชลกร เคยะกูล (กร)",
+    "query": "Field Staff P",
+    "expected_match": "Field Staff P เคยะกูล (กร)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0286",
     "type": "SPECIAL_PAREN",
-    "query": "นายชลกร เคยะกูล",
-    "expected_match": "นายชลกร เคยะกูล (กร)",
+    "query": "Field Staff P เคยะกูล",
+    "expected_match": "Field Staff P เคยะกูล (กร)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
   {
     "test_id": "TEST_0287",
     "type": "EXACT",
-    "query": "ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
-    "expected_match": "ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
+    "query": "Field Staff Q พงศ์สุวรรณ (ปอนด์)",
+    "expected_match": "Field Staff Q พงศ์สุวรรณ (ปอนด์)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
   {
     "test_id": "TEST_0288",
     "type": "VARIANT_MERGED",
-    "query": "ปฐมพงศ์พงศ์สุวรรณ(ปอนด์)",
-    "expected_match": "ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
+    "query": "Field Staff Q",
+    "expected_match": "Field Staff Q พงศ์สุวรรณ (ปอนด์)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
   {
     "test_id": "TEST_0289",
     "type": "SPECIAL_PAREN",
-    "query": "ปฐมพงศ์ พงศ์สุวรรณ",
-    "expected_match": "ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
+    "query": "Field Staff Q พงศ์สุวรรณ",
+    "expected_match": "Field Staff Q พงศ์สุวรรณ (ปอนด์)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content outside parentheses"
   },
@@ -3466,14 +3466,14 @@
     "test_id": "TEST_0290",
     "type": "SPECIAL_PAREN_CONTENT",
     "query": "ปอนด์",
-    "expected_match": "ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
+    "expected_match": "Field Staff Q พงศ์สุวรรณ (ปอนด์)",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Content inside parentheses"
   },
@@ -3483,7 +3483,7 @@
     "query": "คุณชัยยา จิตรพรหม",
     "expected_match": "คุณชัยยา จิตรพรหม",
     "expected_phones": [
-      "074250685"
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
@@ -3493,7 +3493,7 @@
     "query": "คุณชัยยาจิตรพรหม",
     "expected_match": "คุณชัยยา จิตรพรหม",
     "expected_phones": [
-      "074250685"
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
@@ -3503,7 +3503,7 @@
     "query": "คุณสมบูรณ์ เชาวน์ศิริวรกุล",
     "expected_match": "คุณสมบูรณ์ เชาวน์ศิริวรกุล",
     "expected_phones": [
-      "074251450",
+      "<PHONE>",
       "0893932263"
     ],
     "notes": "Exact stored name match"
@@ -3514,7 +3514,7 @@
     "query": "คุณสมบูรณ์เชาวน์ศิริวรกุล",
     "expected_match": "คุณสมบูรณ์ เชาวน์ศิริวรกุล",
     "expected_phones": [
-      "074251450",
+      "<PHONE>",
       "0893932263"
     ],
     "notes": "Merged tokens"
@@ -3525,7 +3525,7 @@
     "query": "คุณปรัชญา ศรีเสาวชาติ",
     "expected_match": "คุณปรัชญา ศรีเสาวชาติ",
     "expected_phones": [
-      "074250685"
+      "<PHONE>"
     ],
     "notes": "Exact stored name match"
   },
@@ -3535,7 +3535,7 @@
     "query": "คุณปรัชญาศรีเสาวชาติ",
     "expected_match": "คุณปรัชญา ศรีเสาวชาติ",
     "expected_phones": [
-      "074250685"
+      "<PHONE>"
     ],
     "notes": "Merged tokens"
   },
@@ -3878,69 +3878,69 @@
   {
     "test_id": "TEST_0329",
     "type": "STRESS_WHITESPACE",
-    "query": "   นายภาณุพงศ์  ทิพย์สังข์  (เม)   ",
-    "expected_match": "นายภาณุพงศ์ ทิพย์สังข์ (เม)",
+    "query": "   Network Engineer A  ทิพย์สังข์  (เม)   ",
+    "expected_match": "Network Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Messy whitespace"
   },
   {
     "test_id": "TEST_0330",
     "type": "STRESS_PREFIX",
-    "query": "ขอเบอร์ นายภาณุพงศ์ ทิพย์สังข์ (เม)",
-    "expected_match": "นายภาณุพงศ์ ทิพย์สังข์ (เม)",
+    "query": "ขอเบอร์ Network Engineer A",
+    "expected_match": "Network Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Prefix ขอเบอร์"
   },
   {
     "test_id": "TEST_0331",
     "type": "STRESS_TH_EN",
-    "query": "contact นายภาณุพงศ์ ทิพย์สังข์ (เม)",
-    "expected_match": "นายภาณุพงศ์ ทิพย์สังข์ (เม)",
+    "query": "contact Network Engineer A",
+    "expected_match": "Network Engineer A",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Eng prefix + Thai Name"
   },
   {
     "test_id": "TEST_0332",
     "type": "STRESS_WHITESPACE",
-    "query": "   นายบดินทร์  เลิศจำรัสพงศ์   ",
-    "expected_match": "นายบดินทร์ เลิศจำรัสพงศ์",
+    "query": "   Field Engineer B  เลิศจำรัสพงศ์   ",
+    "expected_match": "Field Engineer B",
     "expected_phones": [],
     "notes": "Messy whitespace"
   },
   {
     "test_id": "TEST_0333",
     "type": "STRESS_PREFIX",
-    "query": "ติดต่อ นายบดินทร์ เลิศจำรัสพงศ์",
-    "expected_match": "นายบดินทร์ เลิศจำรัสพงศ์",
+    "query": "ติดต่อ Field Engineer B",
+    "expected_match": "Field Engineer B",
     "expected_phones": [],
     "notes": "Prefix ติดต่อ"
   },
   {
     "test_id": "TEST_0334",
     "type": "STRESS_TH_EN",
-    "query": "contact นายบดินทร์ เลิศจำรัสพงศ์",
-    "expected_match": "นายบดินทร์ เลิศจำรัสพงศ์",
+    "query": "contact Field Engineer B",
+    "expected_match": "Field Engineer B",
     "expected_phones": [],
     "notes": "Eng prefix + Thai Name"
   },
@@ -3948,68 +3948,68 @@
     "test_id": "TEST_0335",
     "type": "STRESS_WHITESPACE",
     "query": "   นายปรัชญา  ศรีเสาวชาติ  (ผจ.เปิ้ล)   ",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Messy whitespace"
   },
   {
     "test_id": "TEST_0336",
     "type": "STRESS_PREFIX",
-    "query": "ติดต่อ นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "query": "ติดต่อ Supervisor Agent",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Prefix ติดต่อ"
   },
   {
     "test_id": "TEST_0337",
     "type": "STRESS_TH_EN",
-    "query": "contact นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
-    "expected_match": "นายปรัชญา ศรีเสาวชาติ (ผจ.เปิ้ล)",
+    "query": "contact Supervisor Agent",
+    "expected_match": "Supervisor Agent",
     "expected_phones": [
-      "074240089",
-      "074250685#200",
-      "074250685#300",
-      "074251313",
-      "074273444",
-      "074273444#100"
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>",
+      "<PHONE>"
     ],
     "notes": "Eng prefix + Thai Name"
   },
   {
     "test_id": "TEST_0338",
     "type": "STRESS_WHITESPACE",
-    "query": "   ปฐมพงศ์  พงศ์สุวรรณ  (ปอนด์)   ",
-    "expected_match": "ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
+    "query": "   Field Staff Q  พงศ์สุวรรณ  (ปอนด์)   ",
+    "expected_match": "Field Staff Q พงศ์สุวรรณ (ปอนด์)",
     "expected_phones": [],
     "notes": "Messy whitespace"
   },
   {
     "test_id": "TEST_0339",
     "type": "STRESS_PREFIX",
-    "query": "ติดต่อ ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
-    "expected_match": "ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
+    "query": "ติดต่อ Field Staff Q พงศ์สุวรรณ (ปอนด์)",
+    "expected_match": "Field Staff Q พงศ์สุวรรณ (ปอนด์)",
     "expected_phones": [],
     "notes": "Prefix ติดต่อ"
   },
   {
     "test_id": "TEST_0340",
     "type": "STRESS_TH_EN",
-    "query": "contact ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
-    "expected_match": "ปฐมพงศ์ พงศ์สุวรรณ (ปอนด์)",
+    "query": "contact Field Staff Q พงศ์สุวรรณ (ปอนด์)",
+    "expected_match": "Field Staff Q พงศ์สุวรรณ (ปอนด์)",
     "expected_phones": [],
     "notes": "Eng prefix + Thai Name"
   },
@@ -4061,23 +4061,23 @@
     "test_id": "TEST_0345",
     "type": "STRESS_WHITESPACE",
     "query": "   นายเหมาะโชค  เจียรนัย   ",
-    "expected_match": "นายเหมาะโชค เจียรนัย",
+    "expected_match": "Field Engineer A",
     "expected_phones": [],
     "notes": "Messy whitespace"
   },
   {
     "test_id": "TEST_0346",
     "type": "STRESS_PREFIX",
-    "query": "ขอเบอร์ นายเหมาะโชค เจียรนัย",
-    "expected_match": "นายเหมาะโชค เจียรนัย",
+    "query": "ขอเบอร์ Field Engineer A",
+    "expected_match": "Field Engineer A",
     "expected_phones": [],
     "notes": "Prefix ขอเบอร์"
   },
   {
     "test_id": "TEST_0347",
     "type": "STRESS_TH_EN",
-    "query": "contact นายเหมาะโชค เจียรนัย",
-    "expected_match": "นายเหมาะโชค เจียรนัย",
+    "query": "contact Field Engineer A",
+    "expected_match": "Field Engineer A",
     "expected_phones": [],
     "notes": "Eng prefix + Thai Name"
   },
@@ -4158,24 +4158,24 @@
   {
     "test_id": "TEST_0355",
     "type": "STRESS_WHITESPACE",
-    "query": "   นายชิษณุพงษ์  ชูแก้ว   ",
-    "expected_match": "นายชิษณุพงษ์ ชูแก้ว",
+    "query": "   Field Staff M  ชูแก้ว   ",
+    "expected_match": "Field Staff M ชูแก้ว",
     "expected_phones": [],
     "notes": "Messy whitespace"
   },
   {
     "test_id": "TEST_0356",
     "type": "STRESS_PREFIX",
-    "query": "เบอร์ นายชิษณุพงษ์ ชูแก้ว",
-    "expected_match": "นายชิษณุพงษ์ ชูแก้ว",
+    "query": "เบอร์ Field Staff M ชูแก้ว",
+    "expected_match": "Field Staff M ชูแก้ว",
     "expected_phones": [],
     "notes": "Prefix เบอร์"
   },
   {
     "test_id": "TEST_0357",
     "type": "STRESS_TH_EN",
-    "query": "contact นายชิษณุพงษ์ ชูแก้ว",
-    "expected_match": "นายชิษณุพงษ์ ชูแก้ว",
+    "query": "contact Field Staff M ชูแก้ว",
+    "expected_match": "Field Staff M ชูแก้ว",
     "expected_phones": [],
     "notes": "Eng prefix + Thai Name"
   },
@@ -4215,24 +4215,24 @@
   {
     "test_id": "TEST_0361",
     "type": "STRESS_WHITESPACE",
-    "query": "   นายกำชัย  ธรรมปัญญาสกุล   ",
-    "expected_match": "นายกำชัย ธรรมปัญญาสกุล",
+    "query": "   Field Staff F  ธรรมปัญญาสกุล   ",
+    "expected_match": "Field Staff F ธรรมปัญญาสกุล",
     "expected_phones": [],
     "notes": "Messy whitespace"
   },
   {
     "test_id": "TEST_0362",
     "type": "STRESS_PREFIX",
-    "query": "เบอร์ นายกำชัย ธรรมปัญญาสกุล",
-    "expected_match": "นายกำชัย ธรรมปัญญาสกุล",
+    "query": "เบอร์ Field Staff F ธรรมปัญญาสกุล",
+    "expected_match": "Field Staff F ธรรมปัญญาสกุล",
     "expected_phones": [],
     "notes": "Prefix เบอร์"
   },
   {
     "test_id": "TEST_0363",
     "type": "STRESS_TH_EN",
-    "query": "contact นายกำชัย ธรรมปัญญาสกุล",
-    "expected_match": "นายกำชัย ธรรมปัญญาสกุล",
+    "query": "contact Field Staff F ธรรมปัญญาสกุล",
+    "expected_match": "Field Staff F ธรรมปัญญาสกุล",
     "expected_phones": [],
     "notes": "Eng prefix + Thai Name"
   }

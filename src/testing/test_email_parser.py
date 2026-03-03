@@ -86,7 +86,7 @@ def test_parser():
     emails = extract_joomla_emails(raw_sample)
     print(f"Found: {emails}")
     
-    if "somboonc@ntplc.co.th" in emails:
+    if "<REDACTED_EMAIL>" in emails:
         print("SUCCESS: Decoded correctly.")
     else:
         print("FAILURE: Did not decode correctly.")

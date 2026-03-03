@@ -6,11 +6,11 @@ class TestProvenanceContracts(unittest.TestCase):
     def test_contract_1_canonical_merge(self):
         """
         Contract 1: Phone numbers with formatting differences MUST merge into a single canonical entry.
-        0-7425-0685 == 074250685
+        0-7425-0685 == <PHONE>
         """
         data = [
             {"role": "Staff", "name": "User A", "phones": ["0-7425-0685"], "emails": [], "faxes": [], "source": "FileA"},
-            {"role": "Staff", "name": "User A", "phones": ["074250685"], "emails": [], "faxes": [], "source": "FileB"},
+            {"role": "Staff", "name": "User A", "phones": ["<PHONE>"], "emails": [], "faxes": [], "source": "FileB"},
         ]
         
         results = merge_entities(data)
@@ -22,7 +22,7 @@ class TestProvenanceContracts(unittest.TestCase):
         self.assertEqual(len(rec["phones"]), 1, f"Expected 1 canonical phone, got: {rec['phones']}")
         
         # Verify sources combined
-        # Key might be normalized (e.g. 074250685)
+        # Key might be normalized (e.g. <PHONE>)
         # accessing by values() is safer if we don't know exact calc format yet
         all_sources = []
         for srcs in rec["phone_sources"].values():

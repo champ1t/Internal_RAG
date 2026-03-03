@@ -10,7 +10,7 @@ def test_chat_deterministic():
         {"q": "ระบุสมาชิก fttx", "expected": "รายชื่อสมาชิก"},
         {"q": "ขอตารางเบอร์ omc", "expected": "🔗 [เปิดไฟล์/หน้าเว็บ]"},
         {"q": "ใครคือผจ", "expected": "คุณต้องการค้นหาทีมใด"},
-        {"q": "เบอร์ helpdesk", "expected": "074250685"}
+        {"q": "เบอร์ helpdesk", "expected": "<PHONE>"}
     ]
     
     print("=== FINAL E2E DETERMINISTIC TEST ===")

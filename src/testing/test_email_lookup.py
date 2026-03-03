@@ -33,7 +33,7 @@ class TestEmailLookup(unittest.TestCase):
         print(f"Q: ขออีเมล -> A: {res_email['answer']}")
         
         self.assertEqual(res_email["route"], "context_followup")
-        self.assertIn("somboonc@ntplc.co.th", res_email["answer"])
+        self.assertIn("<REDACTED_EMAIL>", res_email["answer"])
         self.assertIn("อีเมลของ", res_email["answer"])
 
     def test_email_miss(self):

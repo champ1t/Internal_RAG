@@ -11,7 +11,7 @@ class TestContactRoleFallback(unittest.TestCase):
                 {
                     "name": "นายสมชาย ใจดี", 
                     "role": "ผส.บลตน.", 
-                    "phones": ["074251450", "0893932263"],
+                    "phones": ["<PHONE>", "<PHONE>"],
                     "emails": ["somchai@nt.com"]
                 }
             ],
@@ -37,7 +37,7 @@ class TestContactRoleFallback(unittest.TestCase):
         
         self.assertEqual(res["route"], "contact_role_fallback")
         self.assertIn("นายสมชาย", res["answer"])
-        self.assertIn("074251450", res["answer"])
+        self.assertIn("<PHONE>", res["answer"])
         self.assertIn("ผส.บลตน.", res["answer"])
 
     def test_fallback_alias_fuzzy(self):

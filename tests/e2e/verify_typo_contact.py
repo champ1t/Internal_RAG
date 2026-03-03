@@ -19,7 +19,7 @@ def main():
     print(f"Route: {res.get('route')}")
     print(f"Answer: {res.get('answer')}")
     
-    if "074251450" in res.get("answer", ""):
+    if "<PHONE>" in res.get("answer", ""):
         print("[RESULT] PASS")
     else:
         print("[RESULT] FAIL")

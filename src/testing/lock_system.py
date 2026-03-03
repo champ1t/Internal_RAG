@@ -99,7 +99,7 @@ class TestSystemLock(unittest.TestCase):
         # Step 2: Phone
         res_phone = self.engine.process("ขอเบอร์หน่อย")
         self.assertRoute(res_phone, "context_followup")
-        self.assertIn("074251450", res_phone["answer"].replace("-", ""))
+        self.assertIn("<PHONE>", res_phone["answer"].replace("-", ""))
         self.assertZeroLLM(res_phone)
 
         # Step 3: Link
