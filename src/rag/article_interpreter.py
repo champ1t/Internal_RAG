@@ -104,11 +104,16 @@ class ArticleInterpreter:
         bullets_count = 0
         
         if content:
+            # Phase 21 Fix: Paragraph Normalizer
+            # Some scraped articles have numbered items joined in one line (e.g. "1. item 2. item")
+            # Expand them to separate lines before counting so the P/B counters work correctly.
+            # This ONLY affects counting logic, NOT the content sent to the LLM.
+            content_for_counting = re.sub(r'\s+(\d+\.\s)', r'\n\n\1', content)
             # Count non-empty paragraphs (at least 40 chars to be meaningful)
-            paragraphs = [p for p in content.split("\n\n") if len(p.strip()) > 40]
+            paragraphs = [p for p in content_for_counting.split("\n\n") if len(p.strip()) > 40]
             paragraphs_count = len(paragraphs)
             # Count bullets
-            bullets = re.findall(r'^\s*[\•\-\*\d\.)]', content, re.MULTILINE)
+            bullets = re.findall(r'^\s*[\•\-\*\d\.)]', content_for_counting, re.MULTILINE)
             bullets_count = len(bullets)
         
         return {
@@ -390,21 +395,24 @@ Context from Article:
 
 Goal: Summarize this article using the strict 5S Standard format.
 Rules:
-1. Interpret "5ส" ALWAYS as "Seiri, Seiton, Seiso, Seiketsu, Shitsuke".
+1. Interpret "5ส" ALWAYS as "Seiri (สะสาง), Seiton (สะดวก), Seiso (สะอาด), Seiketsu (สร้างมาตรฐาน), Shitsuke (สร้างวินัย)".
 2. Use Thai Language ONLY.
-3. Ignore "Technical Concepts/Steps" if not relevant.
+3. DO NOT include author name or date line in the output.
 4. Format output strictly as:
-   [{display_title}]
-   ผู้เขียน: ... (if found in text) | วันที่: ...
-   
-   สรุปย่อ:
-   - ...
-   
-   หลักการ 5 ข้อ (ถ้ามีในบทความ):
-   1. ...
-   2. ...
-   
-   (ถ้าไม่มี ให้ใช้ความรู้ทั่วไปอธิบายย่อๆ)
+
+[{display_title}]
+
+สรุปย่อ:
+(อธิบาย 2-3 ประโยคว่า 5ส คืออะไร และวัตถุประสงค์ของมาตรฐานนี้คืออะไร — ห้ามลิสต์รายการข้อในส่วนนี้)
+
+หลักการ 5 ข้อ (จากบทความ):
+1. [ชื่อหัวข้อ] — [รายละเอียดเฉพาะที่พบในเนื้อหาของบทความ]
+2. [ชื่อหัวข้อ] — [รายละเอียดเฉพาะที่พบในเนื้อหาของบทความ]
+3. ...
+4. ...
+5. ...
+
+(ถ้าบทความมีรายละเอียดเพิ่มเติม ให้ดึงออกมาในส่วน หลักการ 5 ข้อ เท่านั้น)
 """
             try:
                 from src.rag.ollama_client import ollama_generate
@@ -531,7 +539,25 @@ Rules:
             if content_len < 1200:
                 print(f"[ArticleInterpreter] Hybrid Strategy: SHORT ({content_len} chars) -> Extractive Preview.")
                 from src.rag.article_cleaner import smart_truncate
-                preview_text = smart_truncate(cleaned_content, max_length=900, footer_url=None)
+                
+                # Phase 21 Clean: Remove table pipe junk and author/date metadata lines
+                # These are common scraping artifacts from Joomla CMS
+                clean_lines = []
+                for line in cleaned_content.split('\n'):
+                    stripped = line.strip()
+                    # Skip lines that are just pipes (e.g. "| | |", "| |")
+                    if re.match(r'^[\|\s]+$', stripped) and '|' in stripped:
+                        continue
+                    # Also skip lines ending with table pipe artifacts like "Title | | |"
+                    if re.search(r'\|\s*\|\s*\|?\s*$', stripped):
+                        continue
+                    # Skip author/date metadata lines
+                    if any(k in stripped for k in ["เขียนโดย", "แก้ไขล่าสุด", "วันศุกร์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันเสาร์", "วันอาทิตย์"]):
+                        continue
+                    clean_lines.append(line)
+                
+                preview_content = '\n'.join(clean_lines).strip()
+                preview_text = smart_truncate(preview_content, max_length=900, footer_url=None)
                 
                 final_ans = f"[{display_title}]\n\n{preview_text}"
                 timings["total_ms"] = (time.time() - t_start) * 1000
