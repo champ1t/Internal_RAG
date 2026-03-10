@@ -120,7 +120,8 @@ class ArticleInterpreter:
             "answer": answer,
             "metadata": {
                 "paragraphs": paragraphs_count,
-                "bullets": bullets_count
+                "bullets": bullets_count,
+                "is_extractive": False  # Default: LLM path. SHORT path overrides this to True.
             }
         }
 
@@ -567,7 +568,9 @@ Rules:
                 
                 final_ans = f"[{display_title}]\n\n{preview_text}"
                 timings["total_ms"] = (time.time() - t_start) * 1000
-                return self._wrap_result(final_ans, cleaned_content)
+                result = self._wrap_result(final_ans, cleaned_content)
+                result["metadata"]["is_extractive"] = True  # SHORT path: no LLM used
+                return result
             
             # B) Long Article (>= 1200 chars) -> LLM Summarizer (High Quality)
             else:

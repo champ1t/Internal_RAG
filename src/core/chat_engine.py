@@ -5820,12 +5820,20 @@ class ChatEngine:
         paragraphs = metadata.get("paragraphs", 0)
         bullets = metadata.get("bullets", 0)
         
+        is_extractive = metadata.get("is_extractive", False)
+        
         # Low-Context Rule (LC-1):
-        # If article has < 3 paragraphs AND < 2 bullets, it is likely metadata/nav junk.
-        # Fallback to Link-Only to prevent LLM hallucinations.
-        # Relaxed for Hybrid Mode: Allow command_reference to pass even if short
-        if paragraphs < 3 and bullets < 2 and content_type != "command_reference":
-            print(f"[GOVERNANCE] Phase 21: Low-Context Detected (P={paragraphs}, B={bullets}) -> Forced LINK_ONLY")
+        # LLM path: block if < 3 paragraphs AND < 2 bullets (prevent hallucination on thin content)
+        # Extractive path: block only if ZERO paragraphs AND ZERO bullets (truly empty)
+        # Rationale: extractive path shows raw text directly (no LLM), so risk of hallucination
+        # is zero — only truly empty/junk content should be blocked.
+        if is_extractive:
+            low_context = paragraphs < 1 and bullets < 1
+        else:
+            low_context = paragraphs < 3 and bullets < 2 and content_type != "command_reference"
+        
+        if low_context:
+            print(f"[GOVERNANCE] Phase 21: Low-Context Detected (P={paragraphs}, B={bullets}, extractive={is_extractive}) -> Forced LINK_ONLY")
             return {
                  "answer": (
                      f"📌 **แหล่งข้อมูลหลัก (SMC):**\n"
