@@ -14,6 +14,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, Dict, Any, List
 import yaml
+import uuid
 import sys
 import os
 
@@ -144,10 +145,16 @@ async def process_query(request: QueryRequest):
         }
     """
     try:
+        # If no session_id provided (e.g. from Langflow without session config),
+        # generate a unique per-request ID to prevent context bleeding between conversations.
+        # Trade-off: each request is fully isolated (no cross-request memory from this caller).
+        # To enable multi-turn context, the caller must explicitly send session_id.
+        effective_session_id = request.session_id or f"anon_{uuid.uuid4().hex[:12]}"
+        
         # Process query
         result = engine.process(
             request.query,
-            session_id=request.session_id
+            session_id=effective_session_id
         )
         
         # Extract latency
